@@ -8,10 +8,6 @@ description: ""
 keywords: ""
 ---
 
-
-
-
-
 # Overview #
 
 GroupDocs.Metadata Cloud is a powerful and easy to use metadata management REST API which allows users to read and edit metadata associated with various document, image, audio, video and many other formats.
@@ -56,7 +52,8 @@ Please specify search criteria and metadata will be removed. Please note that no
 
 # Security and Authentication #
 
-The GroupDocs.Metadata Cloud API is secured and requires authentication. Two keys AppSID and AppKey are required for Authentication which can be created at the [Dashboard](http://dashboard.groupdocs.cloud/). Check [Authenticating API Requests](https://docs.groupdocs.cloud/display/gdtotalcloud/Authenticating+API+Requests) article for complete example.
+The GroupDocs.Metadata Cloud API is secured and requires authentication. Two keys Client Id and Client Secret are required for Authentication which can be created at the [Dashboard](http://dashboard.groupdocs.cloud).
+Check [Authenticating API Requests]({{< ref "total/getting-started/overview-rest-api/authenticating-api-requests.md" >}}) article for complete example.
 
 # SDKs #
 
