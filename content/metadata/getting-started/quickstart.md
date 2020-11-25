@@ -45,3 +45,5 @@ var response = apiInstance.GetSupportedFileFormats();
 ```
 
 {{< /tab >}}
+
+{{< /tabs >}}
