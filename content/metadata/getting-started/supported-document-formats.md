@@ -9,14 +9,10 @@ keywords: ""
 ---
 
 
-
-
-
-# Supported Document Formats #
-- [x] lowercase checkmark
 The following table contains a full list of file formats that are currently supported by GroupDocs.Metadata Cloud.
 
 |**Format**|**Description**|**Load**|**Save**|**Remarks**
+|---|---|---|---|---
 |[DOC](https://wiki.fileformat.com/word-processing/doc)|Microsoft Word 97 - 2007 Document.|&#10004;|&#10004;|*.doc versions starting from Microsoft Word 95
 |[DOT](https://wiki.fileformat.com/word-processing/dot/)|Microsoft Word 97 - 2007 Template.|&#10004;|&#10004;| 
 |[DOCX](https://wiki.fileformat.com/word-processing/docx/)|Office Open XML WordprocessingML Document (macro-free).|&#10004;|&#10004;| 

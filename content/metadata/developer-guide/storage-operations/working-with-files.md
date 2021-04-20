@@ -15,37 +15,19 @@ keywords: ""
 # Download File API #
 
 This API allows you to download a file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud).
-|---|---
 
 ## API Explorer ##
 
 [GroupDocs.Metadata Cloud API Reference](https://apireference.groupdocs.cloud/metadata/#/) lets you try out [Download a File API](https://apireference.groupdocs.cloud/metadata/#/File/DownloadFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs expose.
-|---|---|---|---
+
 
 ### Request parameters ###
 
-|#
-|---
-Parameter
-|#
-Description
-
-|
-**Path**
-|
-Path of the file including file name and extension e.g. /Folder1/file.ext
-
- Required. Can be passed as a query string parameter or as part of the URL
-
-|
-storageName
-|
-Name of the storage. If not set, then default storage used
-
-|
-versionId
-|
-File version id
+|Parameter| Description
+|---|---
+|**Path**|Path of the file including file name and extension e.g. /Folder1/file.ext <br />Required. Can be passed as a query string parameter or as part of the URL
+|**storageName**|Name of the storage. If not set, then default storage used
+|**versionId**|File version id
 
 
 ## cURL Example ##
