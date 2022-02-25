@@ -14,8 +14,8 @@ This page contains release notes for GroupDocs.Metadata Cloud 22.2
 
 ## Major Features ##
 
-Add support for the Matroska multimedia container
-Runtime target changed to netcore31
++ Add support for the Matroska multimedia container
++ Runtime target changed to netcore31
 
 ## Full List of Issues Covering all Changes in this Release ##
 
