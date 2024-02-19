@@ -6,13 +6,8 @@ productName: "GroupDocs.Metadata Cloud"
 weight: 1
 description: ""
 keywords: ""
+toc: True
 ---
-
-
-
-
-
-## Introduction ##
 
 This REST API allows to extract metadata from the documents.
 
@@ -44,7 +39,7 @@ The table below contains the full list of properties that can be specified when 
 |ValueOptions.Value|Specifies value of property to find.|Required
 |ValueOptions.Type|Type of property value.|
 
-### Resource URI ###
+## Resource URI
 
 ```html
 HTTP POST ~/metadata
@@ -52,4 +47,4 @@ HTTP POST ~/metadata
 
 [Swagger UI](https://apireference.groupdocs.cloud/metadata/#/Metadata/Extract) lets you call this REST API directly from the browser.  
 
-### Use Cases ###
+## Use Cases

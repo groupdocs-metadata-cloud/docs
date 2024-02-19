@@ -1,9 +1,7 @@
 ---
 id: "release-notes"
-url: "metadata/release-notes"
 title: "Release Notes"
+external: https://releases.groupdocs.cloud/metadata/release-notes/
 productName: "GroupDocs.Metadata Cloud"
-description: ""
-keywords: ""
+weight: 3
 ---
-

@@ -6,13 +6,8 @@ productName: "GroupDocs.Metadata Cloud"
 weight: 2
 description: ""
 keywords: ""
+toc: True
 ---
-
-
-
-
-
-## Introduction ##
 
 This REST API allows to add metadata to the documents.
 
@@ -50,7 +45,7 @@ The table below contains the full list of properties that can be specified when 
 |MatchOptions.ExactPhrase|Value indicating whether to match exact string phrase.|
 |MatchOptions.IsRegex|Value indicating whether to match by regular expression.|
 
-### Resource URI ###
+## Resource URI
 
 ```html
 HTTP POST ~/metadata/add
@@ -58,4 +53,4 @@ HTTP POST ~/metadata/add
 
 [Swagger UI](https://apireference.groupdocs.cloud/metadata/#/Metadata/Add) lets you call this REST API directly from the browser.  
 
-### Use Cases ###
+## Use Cases

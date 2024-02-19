@@ -5,22 +5,18 @@ title: "Working With Files"
 productName: "GroupDocs.Metadata Cloud"
 description: ""
 keywords: ""
+toc: True
 ---
 
-
-
-
-
-
-## Download File API ##
+## Download File API
 
 This API allows you to download a file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud).
 
-### API Explorer ###
+### API Explorer
 
 [GroupDocs.Metadata Cloud API Reference](https://apireference.groupdocs.cloud/metadata/#/) lets you try out [Download a File API](https://apireference.groupdocs.cloud/metadata/#/File/DownloadFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs expose.
 
-#### Request parameters ####
+### Request parameters
 
 |Parameter|Description
 |---|---
@@ -28,10 +24,10 @@ This API allows you to download a file from [GroupDocs Cloud Storage](https://da
 |**storageName**|Name of the storage. If not set, then default storage used
 |**versionId**|File version id
 
-### cURL Example ###
+### cURL example
 
-{{< tabs tabTotal="2" tabID="1" tabName1="Request" tabName2="Response" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example1">}}
+{{< tab "Request" >}}
 
 ```bash
 curl -X GET "https://api.groupdocs.cloud/v1.0/metadata/storage/file/one-page.docx?storageName#MyStorage" \
@@ -40,7 +36,7 @@ curl -X GET "https://api.groupdocs.cloud/v1.0/metadata/storage/file/one-page.doc
 ```
 
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Response" >}}
 
 ```json
 {
@@ -52,30 +48,28 @@ curl -X GET "https://api.groupdocs.cloud/v1.0/metadata/storage/file/one-page.doc
 {{< /tab >}}
 {{< /tabs >}}
 
-### SDKs ###
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-metadata-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-metadata-cloud), it hides the [File API](https://apireference.groupdocs.cloud/metadata/#/) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
-#### SDK Examples ####
-
-{{< tabs tabTotal="2" tabID="2" tabName1="C#" tabName2="Java" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example2">}}
+{{< tab "C#" >}}
 {{< gist groupdocscloud 3c211b41ef72c2070064a8ad93f14fdc Metadata_CSharp_Download_File.cs >}}
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Java" >}}
 {{< gist groupdocscloud b613728b13cd4a7c5e1d585361108181 Metadata_Java_Download_File.java >}}
 {{< /tab >}}
 {{< /tabs >}}
 
-## Upload File API ##
+## Upload File API
 
 This API allows you to upload files to the [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud/).
 
-### API Explorer ###
+### API Explorer
 
 [GroupDocs.Metadata Cloud API Reference](https://apireference.groupdocs.cloud/metadata/#/) lets you try out [Upload a File API](https://apireference.groupdocs.cloud/metadata/#/File/UploadFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs expose.
 
-#### Request Body parameters ####
+### Request Body parameters
 
 |Parameter|Description
 |---|---
@@ -83,10 +77,10 @@ This API allows you to upload files to the [GroupDocs Cloud Storage](https://das
 |storageName|Name of the storage. If not set, then default storage used
 |File|File content
 
-### cURL Example ###
+### cURL example
 
-{{< tabs tabTotal="2" tabID="3" tabName1="Request" tabName2="Response" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example3">}}
+{{< tab "Request" >}}
 
 ```bash
 curl -X POST "https://api.groupdocs.cloud/v1.0/metadata/storage/file/metadatadocs%2Fone-page2.docx?storageName#MyStorage" \
@@ -95,7 +89,7 @@ curl -X POST "https://api.groupdocs.cloud/v1.0/metadata/storage/file/metadatadoc
 ```
 
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Response" >}}
 Http status code: 200 (Returns OK and list of errors, which is empty if success.)
 
 ```json
@@ -120,30 +114,28 @@ Http status code: 200 (Returns OK and list of errors, which is empty if success.
 {{< /tab >}}
 {{< /tabs >}}
 
-### SDKs ###
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-metadata-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-metadata-cloud), it hides the [File API](https://apireference.groupdocs.cloud/metadata/#/File) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
-#### SDK Examples ####
-
-{{< tabs tabTotal="2" tabID="4" tabName1="C#" tabName2="Java" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example4">}}
+{{< tab "C#" >}}
 {{< gist groupdocscloud 3c211b41ef72c2070064a8ad93f14fdc Metadata_CSharp_Upload_File.cs >}}
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Java" >}}
 {{< gist groupdocscloud b613728b13cd4a7c5e1d585361108181 Metadata_Java_Upload_File.java >}}
 {{< /tab >}}
 {{< /tabs >}}
 
-## Delete File API ##
+## Delete File API
 
 This API allows you to delete a specific file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud/).
 
-### API Explorer ###
+### API Explorer
 
 [GroupDocs.Metadata for Cloud API Reference](https://apireference.groupdocs.cloud/metadata/#/) lets you try out [Delete a File](https://apireference.groupdocs.cloud/metadata/#/File/DeleteFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs expose.
 
-#### Request parameters ####
+### Request parameters
 
 |Parameter|Description
 |---|---
@@ -151,10 +143,10 @@ This API allows you to delete a specific file from [GroupDocs Cloud Storage](htt
 |storageName|Name of the storage. If not set, then default storage used
 |versionId|File version id
 
-### cURL Example ###
+### cURL example
 
-{{< tabs tabTotal="2" tabID="5" tabName1="Request" tabName2="Response" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example5">}}
+{{< tab "Request" >}}
 
 ```bash
 curl -X DELETE "https://api.groupdocs.cloud/v1.0/metadata/storage/file/metadatadocs1%2Fone-page1.docx?storageName#MyStorage" \
@@ -163,7 +155,7 @@ curl -X DELETE "https://api.groupdocs.cloud/v1.0/metadata/storage/file/metadatad
 ```
 
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Response" >}}
 
 ```json
 {
@@ -175,30 +167,28 @@ curl -X DELETE "https://api.groupdocs.cloud/v1.0/metadata/storage/file/metadatad
 {{< /tab >}}
 {{< /tabs >}}
 
-### SDKs ###
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-metadata-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-metadata-cloud), it hides the [File API](https://apireference.groupdocs.cloud/metadata/#/File) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
-#### SDK Examples ####
-
-{{< tabs tabTotal="2" tabID="6" tabName1="C#" tabName2="Java" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example6">}}
+{{< tab "C#" >}}
 {{< gist groupdocscloud 3c211b41ef72c2070064a8ad93f14fdc Metadata_CSharp_Delete_File.cs >}}
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Java" >}}
 {{< gist groupdocscloud b613728b13cd4a7c5e1d585361108181 Metadata_Java_Delete_File.java >}}
 {{< /tab >}}
 {{< /tabs >}}
 
-## File Copy API ##
+## File Copy API
 
 This API allows you to copy a specific file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud/).
 
-### API Explorer ###
+### API Explorer
 
 [GroupDocs.Metadata for Cloud API Reference](https://apireference.groupdocs.cloud/metadata/#/) lets you try out [Copy File](https://apireference.groupdocs.cloud/metadata/#/File/CopyFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs expose.
 
-####  Request parameters ####
+###  Request parameters
 
 |Parameter|Description
 |---|---
@@ -208,10 +198,10 @@ This API allows you to copy a specific file from [GroupDocs Cloud Storage](https
 |destStorageName|Name of the storage of destination file. If not set, then default storage used
 |versionId|Source file version id
 
-### cURL Example ###
+### cURL example
 
-{{< tabs tabTotal="2" tabID="7" tabName1="Request" tabName2="Response" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example7">}}
+{{< tab "Request" >}}
 
 ```bash
 curl -X PUT "https://api.groupdocs.cloud/v1.0/metadata/storage/file/copy/metadatadocs%2Fone-page1.docx?destPath#metadatadocs1%2Fone-page1.docx'&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" \
@@ -220,7 +210,7 @@ curl -X PUT "https://api.groupdocs.cloud/v1.0/metadata/storage/file/copy/metadat
 ```
 
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Response" >}}
 
 ```json
 {
@@ -232,30 +222,28 @@ curl -X PUT "https://api.groupdocs.cloud/v1.0/metadata/storage/file/copy/metadat
 {{< /tab >}}
 {{< /tabs >}}
 
-### SDKs ###
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-metadata-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-metadata-cloud), it hides the [File API](https://apireference.groupdocs.cloud/metadata/#/File) calls and lets you use GroupDocs Cloud features in a native way for your preferred language.
 
-#### SDK Examples ####
-
-{{< tabs tabTotal="2" tabID="8" tabName1="C#" tabName2="Java" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example8">}}
+{{< tab "C#" >}}
 {{< gist groupdocscloud 3c211b41ef72c2070064a8ad93f14fdc Metadata_CSharp_Copy_File.cs >}}
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Java" >}}
 {{< gist groupdocscloud b613728b13cd4a7c5e1d585361108181 Metadata_Java_Copy_File.java >}}
 {{< /tab >}}
 {{< /tabs >}}
 
-## File Move API ##
+## File Move API
 
 This API allows you to copy a specific file from [GroupDocs Cloud Storage](https://dashboard.groupdocs.cloud/).
 
-### API Explorer ###
+### API Explorer
 
 [GroupDocs.Metadata for Cloud API Reference](https://apireference.groupdocs.cloud/metadata/#/) lets you try out [Move File](https://apireference.groupdocs.cloud/metadata/#/File/MoveFile) right away in your browser! It allows you to effortlessly interact and try out every single operation our APIs expose.
 
-####  Request parameters ####
+###  Request parameters
 
 |Parameter|Description
 |---|---
@@ -265,10 +253,10 @@ This API allows you to copy a specific file from [GroupDocs Cloud Storage](https
 |destStorageName|Name of the storage of destination file. If not set, then default storage used
 |versionId|Source file version id
 
-### cURL Example ###
+### cURL example
 
-{{< tabs tabTotal="2" tabID="9" tabName1="Request" tabName2="Response" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example9">}}
+{{< tab "Request" >}}
 
 ```bash
 curl -X PUT "https://api.groupdocs.cloud/v1.0/metadata/storage/file/move/metadatadocs%2Fone-page1.docx?destPath#metadatadocs1%2Fone-page1.docx'&#x26;srcStorageName#MyStorage&#x26;destStorageName#MyStorage" \
@@ -277,7 +265,7 @@ curl -X PUT "https://api.groupdocs.cloud/v1.0/metadata/storage/file/move/metadat
 ```
 
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Response" >}}
 
 ```json
 {
@@ -289,17 +277,15 @@ curl -X PUT "https://api.groupdocs.cloud/v1.0/metadata/storage/file/move/metadat
 {{< /tab >}}
 {{< /tabs >}}
 
-### SDKs ###
+### SDK examples
 
 Our API is completely independent of your operating system, database system or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone and time-consuming. Therefore, we have provided and support API [SDKs](https://github.com/groupdocs-metadata-cloud) in many development languages in order to make it easier to integrate with us. If you use [SDK](https://github.com/groupdocs-metadata-cloud), it hides the [File API](https://apireference.groupdocs.cloud/metadata/#/File) calls and lets you use GroupDocs for Cloud features in a native way for your preferred language.
 
-#### SDK Examples ####
-
-{{< tabs tabTotal="2" tabID="10" tabName1="C#" tabName2="Java" >}}
-{{< tab tabNum="1" >}}
+{{< tabs "example10">}}
+{{< tab "C#" >}}
 {{< gist groupdocscloud 3c211b41ef72c2070064a8ad93f14fdc Metadata_CSharp_Move_File.cs >}}
 {{< /tab >}}
-{{< tab tabNum="2" >}}
+{{< tab "Java" >}}
 {{< gist groupdocscloud b613728b13cd4a7c5e1d585361108181 Metadata_Java_Move_File.java >}}
 {{< /tab >}}
 {{< /tabs >}}

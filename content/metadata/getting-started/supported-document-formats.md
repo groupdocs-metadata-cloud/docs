@@ -8,7 +8,6 @@ description: ""
 keywords: ""
 ---
 
-
 The following table contains a full list of file formats that are currently supported by GroupDocs.Metadata Cloud.
 
 |**Format**|**Description**|**Load**|**Save**|**Remarks**

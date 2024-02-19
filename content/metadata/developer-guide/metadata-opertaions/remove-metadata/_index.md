@@ -6,13 +6,8 @@ productName: "GroupDocs.Metadata Cloud"
 weight: 4
 description: ""
 keywords: ""
+toc: True
 ---
-
-
-
-
-
-## Introduction ##
 
 This REST API allows to remove metadata from the documents.
 
@@ -50,7 +45,7 @@ The table below contains the full list of properties that can be specified when 
 |ValueOptions.Value|Specifies value of property to find.|Required
 |ValueOptions.Type|Type of property value.|String is default. Possible types: string;datetime;integer;double;boolean.
 
-### Resource URI ###
+## Resource URI
 
 ```html
 HTTP POST ~/metadata/remove
@@ -58,4 +53,4 @@ HTTP POST ~/metadata/remove
 
 [Swagger UI](https://apireference.groupdocs.cloud/metadata/#/Metadata/Remove) lets you call this REST API directly from the browser.  
 
-### Use Cases ###
+## Use Cases

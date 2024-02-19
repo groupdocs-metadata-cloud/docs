@@ -6,13 +6,8 @@ productName: "GroupDocs.Metadata Cloud"
 weight: 3
 description: ""
 keywords: ""
+toc: True
 ---
-
-
-
-
-
-## Introduction ##
 
 This REST API allows to set metadata new values into existing properties of the documents.
 
@@ -54,7 +49,7 @@ The table below contains the full list of properties that can be specified when 
 |ValueOptions.Value|Specifies value of property to find.|Required
 |ValueOptions.Type|Type of property value.|String is default. Possible types: string;datetime;integer;double;boolean.
 
-### Resource URI ###
+## Resource URI
 
 ```html
 HTTP POST ~/metadata/set
@@ -62,4 +57,4 @@ HTTP POST ~/metadata/set
 
 [Swagger UI](https://apireference.groupdocs.cloud/metadata/#/Metadata/Set) lets you call this REST API directly from the browser.  
 
-### Use Cases ###
+## Use Cases

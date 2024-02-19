@@ -1,7 +1,7 @@
 ---
 id: "metadata"
 url: "metadata"
-title: "GroupDocs.Metadata Cloud Product Family"
+title: "GroupDocs.Metadata Cloud"
 productName: "GroupDocs.Metadata Cloud"
 description: ""
 keywords: ""

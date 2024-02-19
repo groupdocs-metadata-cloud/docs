@@ -5,7 +5,5 @@ title: "Developer Guide"
 productName: "GroupDocs.Metadata Cloud"
 description: ""
 keywords: ""
+weight: 2
 ---
-
-### Developer Guide ###
-
