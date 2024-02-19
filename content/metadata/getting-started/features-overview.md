@@ -52,7 +52,7 @@ Please specify search criteria and metadata will be removed. Please note that no
 ## Security and Authentication
 
 The GroupDocs.Metadata Cloud API is secured and requires authentication. Two keys Client Id and Client Secret are required for Authentication which can be created at the [Dashboard](http://dashboard.groupdocs.cloud).
-Check [Authenticating API Requests]({{< ref "total/getting-started/overview-rest-api/authenticating-api-requests.md" >}}) article for complete example.
+Check [Authenticating API Requests]({{< ref "/total/overview-rest-api/authenticating-api-requests.md" >}}) article for complete example.
 
 ## SDK examples
 
