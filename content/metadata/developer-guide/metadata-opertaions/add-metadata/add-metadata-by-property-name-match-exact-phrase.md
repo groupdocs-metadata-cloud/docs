@@ -15,44 +15,106 @@ This REST API allows you to add metadata information as properties with specifie
 The following example demonstrates how to add metadata date and time information in all properties with the same name as specified.
 
 {{< tabs "example1">}}
-{{< tab "Request" >}}
+{{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
 # First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. 
-# Kindly place Client Id in client_id and Client Secret in "client_secret" argument.
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
-   
-# cURL example to join several documents into one
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
+
+# cURL example to add metadata to a document
 curl -v "https://api.groupdocs.cloud/v1.0/metadata/add" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>" \
--d "{
-    "FileInfo": {
-        "FilePath": "documents\\input.docx",
-        "StorageName": ""
-    },
-    "Properties": [
-        {
-            "Value": "02-12-2020 04:41:10",
-            "Type": "DateTime",
-            "SearchCriteria": {
-                "NameOptions": {
-                    "Value": "Lastprinted",
-                    "MatchOptions": {
-                        "ExactPhrase": true
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
+        "FileInfo": {
+            "FilePath": "documents/input.docx",
+            "StorageName": ""
+        },
+        "Properties": [
+            {
+                "Value": "02-12-2020 04:41:10",
+                "Type": "DateTime",
+                "SearchCriteria": {
+                    "NameOptions": {
+                        "Value": "Lastprinted",
+                        "MatchOptions": {
+                            "ExactPhrase": true
+                        }
                     }
                 }
             }
-        }
-    ]
-}"
+        ]
+      }'
+```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# First get JSON Web Token
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# cURL example to add metadata to a document
+curl.exe -v "https://api.groupdocs.cloud/v1.0/metadata/add" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
+        'FileInfo': {
+            'FilePath': 'documents\\input.docx',
+            'StorageName': ''
+        },
+        'Properties': [
+            {
+                'Value': '02-12-2020 04:41:10',
+                'Type': 'DateTime',
+                'SearchCriteria': {
+                    'NameOptions': {
+                        'Value': 'Lastprinted',
+                        'MatchOptions': {
+                            'ExactPhrase': true
+                        }
+                    }
+                }
+            }
+        ]
+      }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+:: First get JSON Web Token
+:: Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+:: cURL example to add metadata to a document
+curl -v "https://api.groupdocs.cloud/v1.0/metadata/add" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FileInfo\":{\"FilePath\":\"documents\\input.docx\",\"StorageName\":\"\"},\"Properties\":[{\"Value\":\"02-12-2020 04:41:10\",\"Type\":\"DateTime\",\"SearchCriteria\":{\"NameOptions\":{\"Value\":\"Lastprinted\",\"MatchOptions\":{\"ExactPhrase\":true}}}}]}"
 ```
 
 {{< /tab >}}

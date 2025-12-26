@@ -17,27 +17,27 @@ This API allows you to specify any part of metadata tag name or tag category nam
 The following example demonstrates how to set new metadata creator name.
 
 {{< tabs "example1">}}
-{{< tab "Request" >}}
+{{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
 # First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. 
-# Kindly place Client Id in client_id and Client Secret in "client_secret" argument.
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+# Place the Client Id and Secret in the environment variables $CLIENT_ID and $CLIENT_SECRET.
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
-   
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
+
 # cURL example to join several documents into one
 curl -v "https://api.groupdocs.cloud/v1.0/metadata/set" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>" \
--d "{
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
     "FileInfo": {
-        "FilePath": "documents\\input.docx",
+        "FilePath": "documents/input.docx",
         "StorageName": ""
     },
     "Properties": [
@@ -51,7 +51,69 @@ curl -v "https://api.groupdocs.cloud/v1.0/metadata/set" \
             }
         }
     ]
+}'
+```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# First get JSON Web Token
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+# Set them in the environment variables $env:CLIENT_ID and $env:CLIENT_SECRET.
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# cURL example to join several documents into one
+curl.exe -v "https://api.groupdocs.cloud/v1.0/metadata/set" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
+    'FileInfo': {
+        'FilePath': 'documents/input.docx',
+        'StorageName': ''
+    },
+    'Properties': [
+        {
+            'NewValue': 'NewAuthor',
+            'Type': 'String',
+            'SearchCriteria': {
+                'TagOptions': {
+                    'PossibleName': 'creator'
+                }
+            }
+        }
+    ]
 }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+:: First get JSON Web Token
+:: Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+:: Set them in the environment variables %CLIENT_ID% and %CLIENT_SECRET%.
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+:: cURL example to join several documents into one
+curl -v "https://api.groupdocs.cloud/v1.0/metadata/set" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FileInfo\":{\"FilePath\":\"documents\\input.docx\",\"StorageName\":\"\"},\"Properties\":[{\"NewValue\":\"NewAuthor\",\"Type\":\"String\",\"SearchCriteria\":{\"TagOptions\":{\"PossibleName\":\"creator\"}}}]}"
 ```
 
 {{< /tab >}}

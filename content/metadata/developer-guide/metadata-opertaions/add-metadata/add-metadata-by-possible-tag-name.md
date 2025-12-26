@@ -17,25 +17,23 @@ This API allows you to specify any part of metadata tag name or tag category nam
 The following example demonstrates how to add metadata date and time information in all properties that have particular string phrase in theirs tag names.
 
 {{< tabs "example1">}}
-{{< tab "Request" >}}
+{{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
-# First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. 
-# Kindly place Client Id in client_id and Client Secret in "client_secret" argument.
+# Get JSON Web Token
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
-   
-# cURL example to join several documents into one
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
+
+# Join several documents into one
 curl -v "https://api.groupdocs.cloud/v1.0/metadata/add" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>" \
--d "{
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
     "FileInfo": {
         "FilePath": "documents\\input.docx",
         "StorageName": ""
@@ -51,7 +49,65 @@ curl -v "https://api.groupdocs.cloud/v1.0/metadata/add" \
             }
         }
     ]
+}'
+```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# Get JSON Web Token
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# Join several documents into one
+curl.exe -v "https://api.groupdocs.cloud/v1.0/metadata/add" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{
+    'FileInfo': {
+        'FilePath': 'documents\\input.docx',
+        'StorageName': ''
+    },
+    'Properties': [
+        {
+            'Value': '02-12-2020 04:41:10',
+            'Type': 'DateTime',
+            'SearchCriteria': {
+                'TagOptions': {
+                    'PossibleName': 'timeprinted'
+                }
+            }
+        }
+    ]
 }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+rem Get JSON Web Token
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+rem Join several documents into one
+curl -v "https://api.groupdocs.cloud/v1.0/metadata/add" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FileInfo\":{\"FilePath\":\"documents\\input.docx\",\"StorageName\":\"\"},\"Properties\":[{\"Value\":\"02-12-2020 04:41:10\",\"Type\":\"DateTime\",\"SearchCriteria\":{\"TagOptions\":{\"PossibleName\":\"timeprinted\"}}}]}"
 ```
 
 {{< /tab >}}

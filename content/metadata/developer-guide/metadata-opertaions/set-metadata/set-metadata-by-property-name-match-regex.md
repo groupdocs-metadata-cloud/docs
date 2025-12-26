@@ -15,27 +15,26 @@ This REST API allows to set document metadata new values choosing properties wi
 The following example demonstrates how to set metadata information to all properties that match regular expression "^NameOfApp.*".
 
 {{< tabs "example1">}}
-{{< tab "Request" >}}
+{{< tab "Linux/MacOS/Bash" >}}
 
 ```bash
 # First get JSON Web Token
-# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications. 
-# Kindly place Client Id in client_id and Client Secret in "client_secret" argument.
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
 curl -v "https://api.groupdocs.cloud/connect/token" \
--X POST \
--d "grant_type#client_credentials&client_id#xxxx&client_secret#xxxx" \
--H "Content-Type: application/x-www-form-urlencoded" \
--H "Accept: application/json"
-   
+  -X POST \
+  -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "Accept: application/json"
+
 # cURL example to join several documents into one
 curl -v "https://api.groupdocs.cloud/v1.0/metadata/set" \
--X POST \
--H "Content-Type: application/json" \
--H "Accept: application/json" \
--H "Authorization: Bearer <jwt token>" \
--d "{
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -d '{
     "FileInfo": {
-        "FilePath": "documents\\input.docx",
+        "FilePath": "documents/input.docx",
         "StorageName": ""
     },
     "Properties": [
@@ -52,7 +51,51 @@ curl -v "https://api.groupdocs.cloud/v1.0/metadata/set" \
             }
         }
     ]
-}"
+}'
+```
+
+{{< /tab >}}
+
+{{< tab "Windows PowerShell" >}}
+
+```powershell
+# First get JSON Web Token
+# Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+curl.exe -v "https://api.groupdocs.cloud/connect/token" `
+  -X POST `
+  -d "grant_type=client_credentials&client_id=$env:CLIENT_ID&client_secret=$env:CLIENT_SECRET" `
+  -H "Content-Type: application/x-www-form-urlencoded" `
+  -H "Accept: application/json"
+
+# cURL example to join several documents into one
+curl.exe -v "https://api.groupdocs.cloud/v1.0/metadata/set" `
+  -X POST `
+  -H "Content-Type: application/json" `
+  -H "Accept: application/json" `
+  -H "Authorization: Bearer $env:JWT_TOKEN" `
+  -d "{ 'FileInfo': { 'FilePath': 'documents\\input.docx', 'StorageName': '' }, 'Properties': [ { 'NewValue': 'microsoft word office', 'Type': 'String', 'SearchCriteria': { 'NameOptions': { 'Value': '^NameOfApp.*', 'MatchOptions': { 'IsRegex': true } } } } ] }"
+```
+
+{{< /tab >}}
+
+{{< tab "Windows CMD" >}}
+
+```cmd
+:: First get JSON Web Token
+:: Please get your Client Id and Client Secret from https://dashboard.groupdocs.cloud/applications.
+curl -v "https://api.groupdocs.cloud/connect/token" ^
+  -X POST ^
+  -d "grant_type=client_credentials&client_id=%CLIENT_ID%&client_secret=%CLIENT_SECRET%" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -H "Accept: application/json"
+
+:: cURL example to join several documents into one
+curl -v "https://api.groupdocs.cloud/v1.0/metadata/set" ^
+  -X POST ^
+  -H "Content-Type: application/json" ^
+  -H "Accept: application/json" ^
+  -H "Authorization: Bearer %JWT_TOKEN%" ^
+  -d "{\"FileInfo\": {\"FilePath\": \"documents\\\\input.docx\", \"StorageName\": \"\"}, \"Properties\": [{\"NewValue\": \"microsoft word office\", \"Type\": \"String\", \"SearchCriteria\": {\"NameOptions\": {\"Value\": \"^NameOfApp.*\", \"MatchOptions\": {\"IsRegex\": true}}}}]}"
 ```
 
 {{< /tab >}}
